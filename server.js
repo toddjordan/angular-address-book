@@ -1,3 +1,5 @@
+'use strict';
+
 require('colors');
 var path = require('path');
 var express = require('express');
@@ -7,6 +9,7 @@ var app = express();
 
 
 app.use('/mockup/', express.static(path.join(__dirname, 'mockup')));
+app.use('/app/', express.static(path.join(__dirname, 'app')));
 app.get('/api/people', function(req, res) {
     res.end(JSON.stringify(people, null, '    '));
 });
