@@ -17,13 +17,15 @@
     <div class="row">
       <div class="col-sm-3 col-md-2 sidebar"
            ng-controller="PersonMenuController">
-        <ul >
-          <li ng-repeat="person in peopleListObj.peopleList | orderBy:
-              currentSort">{{person.name}}</li>
+        <ul class="nav nav-pills nav-stacked" role="navigation">
+          <li ng-repeat="person in peopleListObj.peopleList | orderBy:currentSort" 
+              ng-class="{'active': isActiveMenuItem('{{person.name}}')}" 
+              ng-click="selectPerson(person.name)">
+            <a href="" >{{person.name}}</a>
+          </li>
         </ul>
       </div>
-      <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2
-           main" ng-controller="PersonDetailsController">
+      <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main" ng-controller="PersonDetailsController">
         Details {{detail}}
       </div>
     </div>
