@@ -1,7 +1,9 @@
 'use strict';
+/* global getJSONFixture, PersonService */
 
-describe('The person details controller', function() {
+describe('The person menu controller', function() {
   var $httpBackend, controller, menuController, scope, rootScope, personService, peopleData;
+
   jasmine.getJSONFixtures().fixturesPath= 'base/data';
   peopleData = getJSONFixture('people.json');
 
