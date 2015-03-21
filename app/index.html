@@ -19,8 +19,8 @@
            ng-controller="PersonMenuController">
         <ul class="nav nav-pills nav-stacked" role="navigation">
           <li ng-repeat="person in peopleListObj.peopleList | orderBy:currentSort" 
-              ng-class="{'active': isActiveMenuItem($index)}" 
-              ng-click="selectPerson($index)">
+              ng-class="{'active': isActiveMenuItem(peopleListObj.peopleList.indexOf(person))}" 
+              ng-click="selectPerson(peopleListObj.peopleList.indexOf(person))">
             <a href="" >{{person.name}}</a>
           </li>
         </ul>
