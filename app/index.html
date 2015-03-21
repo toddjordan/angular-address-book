@@ -33,30 +33,37 @@
               pic
             </div>
             <div class="col-md-6 summary">
-              <h3>Name</h3>
+              <h3>{{selectedPerson.name}}</h3>
               <ul class="list-unstyled">
                 <li>
-                  Job
+                  {{selectedPerson.workExperience[0].title}}
                 </li>
                 <li>
-                  Phone
+                  {{selectedPerson.phone}}
                 </li>
                 <li>
-                  <a href="mailto://email">Email</a>
+                  <a href="mailto://{{selectedPerson.email}}">{{selectedPerson.email}}</a>
                 </li>
               </div>
             </div>
           </div>
-          <div class="row"><!-- ng-repeat here -->
+          <div class="row">
             <div class="col-md-12">
               <h3>Education</h3>
-              <dl class="dl-horizontal">
-                <dt>year range</dt>
-                <dd>School</dd>
-                <dd>Degree</dd>
-                <dt>year range2</dt>
-                <dd>School2</dd>
-                <dd>Degree</dd>
+              <dl class="dl-horizontal" ng-repeat="e in selectedPerson.education">
+                <dt>{{e.startYear}} - {{e.endYear}}</dt>
+                <dd>{{e.institution}}</dd>
+                <dd>{{e.degree}}</dd>
+              </dl>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-12">
+              <h3>Experience</h3>
+              <dl class="dl-horizontal" ng-repeat="w in selectedPerson.workExperience">
+                <dt>{{w.startYear}} - {{w.endYear?w.endYear:'Present'}}</dt>
+                <dd>{{w.institution}}</dd>
+                <dd>{{w.title}}</dd>
               </dl>
             </div>
           </div>

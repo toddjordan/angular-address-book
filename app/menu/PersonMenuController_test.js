@@ -14,10 +14,10 @@ describe('The person menu controller', function() {
     beforeEach(inject(function($injector, $rootScope, $controller) {
       controller = $controller;
       $httpBackend = $injector.get('$httpBackend');
-
       $httpBackend.whenGET('/api/people').respond(
         peopleData
       );
+      $rootScope.selectedPerson = {};
       scope = $rootScope.$new();
       rootScope = $rootScope;
       var $http = $injector.get('$http');

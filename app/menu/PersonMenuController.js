@@ -7,6 +7,7 @@ personMenuModule.controller('PersonMenuController', ['$scope', '$rootScope','Per
     $scope.peopleListObj = personService.getPeopleListObj();    
     $scope.selectedIndex = 0;
     $rootScope.selectedPerson = $scope.peopleListObj.peopleList[0];
+    $rootScope.$emit('personSelected', $rootScope.selectedPerson);
   };
   var loadFail = function() {
     $scope.peopleListObj = personService.getPeopleListObj();
@@ -22,7 +23,8 @@ personMenuModule.controller('PersonMenuController', ['$scope', '$rootScope','Per
   $scope.selectPerson = function(index) {
     console.log("index selected: " + index);
     $scope.selectedIndex = index;
-    $rootScope.selectedPerson = $scope.peopleListObj.personList[index];
+    $rootScope.selectedPerson = $scope.peopleListObj.peopleList[index];
+    $rootScope.$emit('personSelected', $rootScope.selectedPerson);
   };
 
 }]);

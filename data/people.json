@@ -2,6 +2,8 @@
     "people": [
         {
             "name": "Adam Wright",
+            "email": "adam@megacorp.com",
+            "phone": "(555)123-1234",
             "education": [
                 {
                     "institution": "NC State University",
@@ -16,11 +18,19 @@
                     "institution": "Megacorp",
                     "startYear": 2001,
                     "title": "Software Developer"
+                },
+                {
+                    "institution": "Food Inc.",
+                    "startYear": 1998,
+                    "endYear": 2001,
+                    "title": "Software Developer"
                 }
             ]
         },
         {
             "name": "Joe Manfrey",
+            "email": "joe@food.com",
+            "phone": "(555)987-6543",
             "education": [
                 {
                     "institution": "Clemson University",
@@ -40,6 +50,8 @@
         },
         {
             "name": "Douglas Cho",
+            "email": "doug@food.com",
+            "phone": "(555)246-8101",
             "education": [
                 {
                     "institution": "University of NC, Chapel Hill",
@@ -59,6 +71,8 @@
         },
         {
             "name": "Allison Murray",
+            "email": "allison@up.com",
+            "phone": "(555)444-3333",
             "education": [
                 {
                     "institution": "University of Southern California",
