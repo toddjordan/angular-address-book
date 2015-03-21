@@ -4,6 +4,7 @@
             "name": "Adam Wright",
             "email": "adam@megacorp.com",
             "phone": "(555)123-1234",
+            "profileImage": "images/adam.jpg",
             "education": [
                 {
                     "institution": "NC State University",
@@ -31,6 +32,7 @@
             "name": "Joe Manfrey",
             "email": "joe@food.com",
             "phone": "(555)987-6543",
+            "profileImage": "images/joe.jpg",
             "education": [
                 {
                     "institution": "Clemson University",
@@ -52,6 +54,7 @@
             "name": "Douglas Cho",
             "email": "doug@food.com",
             "phone": "(555)246-8101",
+            "profileImage": "images/doug.jpg",
             "education": [
                 {
                     "institution": "University of NC, Chapel Hill",
@@ -73,6 +76,7 @@
             "name": "Allison Murray",
             "email": "allison@up.com",
             "phone": "(555)444-3333",
+            "profileImage": "images/allison.jpg",
             "education": [
                 {
                     "institution": "University of Southern California",
