@@ -7,7 +7,7 @@ function PersonService($http) {
   var peopleListObj = {
     peopleList:[],
     getFirst:function() {
-      return this.peopleList.length>0?peopleList[0]:nullPerson;
+      return this.peopleList.length>0?this.peopleList[0]:nullPerson;
     }
   };
 

@@ -9,12 +9,13 @@ module.exports = function(config) {
       'node_modules/angular/angular.js',
       'node_modules/angular-mocks/angular-mocks.js',
       'app/services/PersonService.js',
-      'app/**/*_test.js'
+      'app/**/*.js',
+      {pattern: 'data/*.json', watched: true, served: true, included: false}
     ],
 
     autoWatch: true,
 
-    frameworks: ['jasmine'],
+    frameworks: ['jasmine-jquery', 'jasmine'],
 
     browsers: ['Chrome'],
 
@@ -24,7 +25,8 @@ module.exports = function(config) {
       'karma-jasmine',
       'karma-junit-reporter',
       'karma-html-reporter',
-      'karma-coverage'
+      'karma-coverage',
+      'karma-jasmine-jquery'
     ],
 
     reporters: ['progress', 'html', 'coverage'],
