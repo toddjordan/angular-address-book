@@ -39,7 +39,7 @@ describe('The person menu controller', function() {
     it('should load all people into scope', function() {
 
       $httpBackend.flush();
-      expect(scope.peopleListObj.peopleList.length).toBe(4);
+      expect(scope.peopleList.length).toBe(4);
     });
 
     it('should select the first person in the list', function() {
@@ -72,7 +72,7 @@ describe('The person menu controller', function() {
 
     it('should default person model to empty', function() {
       $httpBackend.flush();
-      expect(scope.peopleListObj.peopleList.length).toBe(0);
+      expect(scope.peopleList.length).toBe(0);
     });
     
   });

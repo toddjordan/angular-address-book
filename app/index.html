@@ -34,9 +34,9 @@
           </div>
         </div>
         <ul class="nav nav-pills nav-stacked clear-floats" role="navigation">
-          <li ng-repeat="person in peopleListObj.peopleList | orderBy:currentSort" 
-              ng-class="{'active': isActiveMenuItem(peopleListObj.peopleList.indexOf(person))}" 
-              ng-click="selectPerson(peopleListObj.peopleList.indexOf(person))">
+          <li ng-repeat="person in peopleList | orderBy:currentSort" 
+              ng-class="{'active': isActiveMenuItem(peopleList.indexOf(person))}" 
+              ng-click="selectPerson(peopleList.indexOf(person))">
             <a href="" >{{person.name}}</a>
           </li>
         </ul>

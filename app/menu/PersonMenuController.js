@@ -4,13 +4,13 @@ var personMenuModule = angular.module('addressBook.personMenu', []);
 
 personMenuModule.controller('PersonMenuController', ['$scope', '$rootScope','PersonService', function($scope, $rootScope, personService) {
   var successfulLoad = function() {
-    $scope.peopleListObj = personService.getPeopleListObj();    
+    $scope.peopleList = personService.getPeopleList();    
     $scope.selectedIndex = 0;
-    $rootScope.selectedPerson = $scope.peopleListObj.peopleList[0];
+    $rootScope.selectedPerson = $scope.peopleList[0];
     $rootScope.$emit('personSelected', $rootScope.selectedPerson);
   };
   var loadFail = function() {
-    $scope.peopleListObj = personService.getPeopleListObj();
+    $scope.peopleList = personService.getPeopleList();
     console.log("Nobody loves you");
   };
   personService.loadPeople(successfulLoad, loadFail);
@@ -38,9 +38,10 @@ personMenuModule.controller('PersonMenuController', ['$scope', '$rootScope','Per
   $scope.selectPerson = function(index) {
     console.log("index selected: " + index);
     $scope.selectedIndex = index;
-    $rootScope.selectedPerson = $scope.peopleListObj.peopleList[index];
+    $rootScope.selectedPerson = $scope.peopleList[index];
     $rootScope.$emit('personSelected', $rootScope.selectedPerson);
   };
 
 }]);
+
 
