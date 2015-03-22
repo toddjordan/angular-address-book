@@ -20,15 +20,14 @@ personMenuModule.controller('PersonMenuController', ['$scope', '$rootScope','Per
     return $scope.currentSort.charAt(0) !== '-';
   };
   $scope.sortAscending = function() {
-    if ($scope.currentSort.charAt() === '-') {
+    if ($scope.currentSort.charAt(0) === '-') {
       $scope.currentSort = $scope.currentSort.slice(1, $scope.currentSort.length);
     }
   };
   $scope.sortDescending = function() {
-    if ($scope.currentSort.charAt() !== '-') {
+    if ($scope.currentSort.charAt(0) !== '-') {
       $scope.currentSort = '-'+$scope.currentSort;
     }
-
   };
   
   $scope.isActiveMenuItem = function(index) {
