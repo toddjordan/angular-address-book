@@ -16,6 +16,21 @@ personMenuModule.controller('PersonMenuController', ['$scope', '$rootScope','Per
   personService.loadPeople(successfulLoad, loadFail);
 
   $scope.currentSort = 'name';
+  $scope.isSortAscending = function() {
+    return $scope.currentSort.charAt(0) !== '-';
+  };
+  $scope.sortAscending = function() {
+    if ($scope.currentSort.charAt() === '-') {
+      $scope.currentSort = $scope.currentSort.slice(1, $scope.currentSort.length);
+    }
+  };
+  $scope.sortDescending = function() {
+    if ($scope.currentSort.charAt() !== '-') {
+      $scope.currentSort = '-'+$scope.currentSort;
+    }
+
+  };
+  
   $scope.isActiveMenuItem = function(index) {
     console.log("index active?: " + index);
     return index===$scope.selectedIndex;

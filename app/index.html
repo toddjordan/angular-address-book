@@ -17,7 +17,23 @@
     <div class="row">
       <div class="col-sm-3 col-md-2 sidebar"
            ng-controller="PersonMenuController">
-        <ul class="nav nav-pills nav-stacked" role="navigation">
+        <div class="btn-toolbar sort-toolbar" role="toolbar">
+          <div class="btn-group">
+            <button type="button" class="btn btn-default btn-lg sort-toolbar-btn"
+                    aria-label="Sort Ascending" 
+                    ng-class="{'active': isSortAscending()}"
+                    ng-click="sortAscending()">
+              <span class="glyphicon glyphicon-sort-by-alphabet" aria-hidden="true"></span>
+            </button>
+            <button type="button" class="btn btn-default btn-lg sort-toolbar-btn"
+                    aria-label="Sort Descending" 
+                    ng-class="{'active': !isSortAscending()}"
+                    ng-click="sortDescending()">
+              <span class="glyphicon glyphicon-sort-by-alphabet-alt" aria-hidden="true"></span>
+            </button>
+          </div>
+        </div>
+        <ul class="nav nav-pills nav-stacked clear-floats" role="navigation">
           <li ng-repeat="person in peopleListObj.peopleList | orderBy:currentSort" 
               ng-class="{'active': isActiveMenuItem(peopleListObj.peopleList.indexOf(person))}" 
               ng-click="selectPerson(peopleListObj.peopleList.indexOf(person))">
