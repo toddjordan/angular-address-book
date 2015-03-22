@@ -45,3 +45,16 @@ gulp.task('watch', function() {
   gulp.watch(files, ['lint', 'test']);
 });
 
+gulp.task('e2e',['start'], function() {
+
+
+  gulp.src(["./src/tests/*.js"])
+    .pipe(protractor({
+      configFile: "e2e-tests/protractor.conf.js",
+      args: ['--baseUrl', 'http://127.0.0.1:8080']
+    })).on('error', function(e) { 
+      throw e;
+    });
+
+});
+

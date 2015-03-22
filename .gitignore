@@ -1,3 +1,4 @@
 node_modules/
 karma_html/
+coverage/
 npm-debug.log
