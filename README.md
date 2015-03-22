@@ -1,6 +1,7 @@
 Programming Exercise: Address Book
 ---
-
+## Screenshot
+![alt text](https://github.com/toddjordan/address-book-exercise/blob/master/screenshots/AppScreenShot.png "awesome sauce")
 ## Setup
 1. Install NodeJS
 2. Install Dependencies
@@ -27,7 +28,7 @@ gulp
 gulp watch
 ```
 
-### Run end to end protractor tests
+## Run end to end protractor tests
 the "gulp e2e" command will fire up nodemon and run the tests.
 ```bash
 webdriver-manager update
@@ -44,6 +45,10 @@ http://localhost:8080/mockup/
 
 **People Data:**
 http://localhost:8080/api/people
+
+## Unit Test Results
+![alt text](https://github.com/toddjordan/address-book-exercise/blob/master/screenshots/UnitTestReport.png "Unit Tests")
+![alt text](https://github.com/toddjordan/address-book-exercise/blob/master/screenshots/UnitTestCoverageReport.png "Unit Test Coverage")
 
 ## Goals
 - ~~Create a simple address book web application and use the given static
